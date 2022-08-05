@@ -66,3 +66,7 @@ int main() {
 }
 
 // } Driver Code Ends
+
+
+// Differnt Approch 
+
