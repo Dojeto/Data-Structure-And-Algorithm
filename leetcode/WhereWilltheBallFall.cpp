@@ -73,3 +73,53 @@ public:
  
 Bad Approch need to solve buffer
 */
+
+// better approch - checking each and every row 
+class Solution {
+public:
+    vector<int> findBall(vector<vector<int>>& grid) {
+        int row = grid.size(),col= grid[0].size();
+        vector <int> arr(col,0);
+        vector <int> vis(col,0);
+        for(int i=0;i<col;i++)
+        {
+            arr[i] = i;
+        }
+        for(int i=0;i<row;i++)
+        {
+            for(int j=0;j<col;j++)
+            {
+                if(vis[j] != -1)
+                {
+                    int index = arr[j];
+                    if(grid[i][index]==1)
+                    {
+                        if(index == col-1 || grid[i][index+1] == -1)
+                        {
+                            vis[j] = -1;
+                            arr[j] = -1;
+                        }
+                        else
+                        {
+                            arr[j] = index+1;
+                        }
+                    }
+                    else
+                    {
+                        if(index == 0 || grid[i][index-1] == 1)
+                        {
+                            vis[j] = -1;
+                            arr[j] = -1;
+                        }
+                        else
+                        {
+                            arr[j] = index-1;
+                        }
+                    }
+                }
+            }
+        }
+        return arr;
+    }
+};
+
