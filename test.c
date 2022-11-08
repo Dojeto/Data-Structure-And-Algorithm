@@ -9,6 +9,8 @@ void display (int arr[],int f , int r )
     }
 }
 
+//testing
+
 void push (int arr[],int *f,int *r,int N,int y)
 {
     if(*f == -1)
