@@ -9,6 +9,10 @@ public:
             arr.push_back(n % 2);
             n = n/2;
         }
+        if(arr.size() == 0)
+        {
+            arr.push_back(0);
+        }
         return arr;
     }
 
@@ -27,11 +31,11 @@ public:
         }
         for(int i=0;i<arr.size();i++)
         {
-            if(i <= arr2.size())
+            if(i <= arr2.size() -1)
             {
                 if(arr[i] != arr2[i])
                 {
-                counter++;
+                    counter++;
                 }
             }
             else{
@@ -44,5 +48,3 @@ public:
         return counter;
     }
 };
-
-//still have some issue
