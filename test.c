@@ -43,7 +43,6 @@ int main() {
     push(arr,&front,&rare,5,1);
     push(arr,&front,&rare,5,8);
     // push(arr,&front,&rare,5,12);
-    // push(arr,&front,&rare,5,102); 
     display(arr,front,rare);
     return 0;
 }
