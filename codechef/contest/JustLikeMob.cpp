@@ -34,3 +34,43 @@ int main() {
 	}
 	return 0;
 }
+
+// New method
+
+#include <iostream>
+using namespace std;
+
+int main() {
+	int T;
+	cin >> T;
+	while(T--)
+	{   
+	    int n,m,k,x,temp;
+	    cin >> n >> m >> k >> x;
+	    
+	    k--;
+	    if(k==0)
+	    {
+	        cout << "yes" << endl;
+	        continue;
+	    }
+	    
+	    temp = x / ((n*k) + (n+m));
+	    
+	    x-= temp * ((n*k) + (n+m));
+	    
+	    if(x==0)
+	    {
+	        cout << "yes" << endl;
+	    }
+	    else if(x-n*k <=0)
+	    {
+	        cout << "no" << endl;
+	    }
+	    else{
+	        cout << "yes" <<endl;
+	    }
+	}
+	return 0;
+}
+
