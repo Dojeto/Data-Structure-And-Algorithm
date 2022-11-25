@@ -18,3 +18,20 @@ public:
 };
 
 // TLE
+
+
+//wroking o(n) and o(1)
+
+class Solution {
+public:
+    int maxProfit(vector<int>& prices) {
+    
+    int minn=INT_MAX,profit=0;
+    for(int i=0;i<prices.size();i++)
+    {
+        minn = min(prices[i],minn);
+        profit = max(prices[i] - minn,profit);
+    }
+    return profit;
+    }
+};
